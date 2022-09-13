@@ -1,0 +1,114 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Task index
+{% endblock %}
+
+{% block stylesheets %}
+	<link rel="stylesheet" href='../../css/styles.css' type="text/css">
+{% endblock %}
+
+{% block body %}
+
+
+	<h1 class="text-center wbkg">Task In Progress</h1>
+	<div class="tabby" style="padding:10px;display:table;">
+		<table class="table">
+			<thead>
+				<tr>
+					<th>Task Of</th>
+					<th>Task ID</th>
+					<th>Type</th>
+					<th>State</th>
+					<th>Income</th>
+				</tr>
+			</thead>
+			<tbody>
+			{% set totalip = 0 %}
+				{% for task in tasks %}
+					<tr>
+						<td>{{ task.user.username }}</td>
+						<td>{{ task.taskId }}</td>
+						<td>{{ task.type }}</td>
+						<td>{{ task.state }}</td>
+						{% if task.type == "big" %}
+						{% set totalip = totalip + 10000 %}
+						<td>€10.000</td>
+						{% elseif task.type == "medium" %}
+						{% set totalip = totalip + 2500 %}
+						<td>€2.500</td>
+						{% elseif task.type == "small" %}
+						{% set totalip = totalip + 1000 %}
+						<td>€1.000</td>
+						{% endif %}
+					</tr>
+				{% else %}
+					<tr>
+						<td colspan="8">No records found</td>
+					</tr>
+				{% endfor %}
+
+			</tbody>
+		</table>
+	</div>
+
+
+	<h1 class="text-center wbkg">Task Done</h1>
+	<div class="tabby" style="padding:10px;display:table;">
+		<table class="table">
+			<thead>
+				<tr>
+					<th>Task Of</th>
+					<th>Task ID</th>					
+					<th>State</th>
+					<th>Actions</th>
+				</tr>
+			</thead>
+			<tbody>
+			{% set totald = 0 %}
+				{% for task in tasks_done %}
+					<tr>
+						<td>{{ task.user.username }}</td>
+						<td>{{ task.taskId }}</td>						
+						<td>{{ task.state }}</td>
+						{% if task.type == "big" %}
+						{% set totald = totald + 10000 %}
+						<td>€10.000</td>
+						{% elseif task.type == "medium" %}
+						{% set totald = totald + 2500 %}
+						<td>€2.500</td>
+						{% elseif task.type == "small" %}
+						{% set totald = totald + 1000 %}
+						<td>€1.000</td>
+						{% endif %}
+					</tr>
+				{% else %}
+					<tr>
+						<td colspan="8">No records found</td>
+					</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+
+
+	</div>
+
+	<div class="tabby" style="padding:10px;display:table;">
+		<table class="table">
+			<thead>
+				<th>Grand total:</th>
+				<th>€{{ totalip + totald }}</th>					
+			</thead>			
+			<tbody>
+			<tr>
+			<th>Total "In Progress":</th>
+			<th>€{{ totalip }}</th>
+			</tr>
+			<tr>
+			<th>Total "Done":</th>
+			<th>€{{ totald }}</th>
+			</tr>
+			</tbody>
+		</table>		
+	</div>
+
+{% endblock %}

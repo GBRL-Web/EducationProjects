@@ -1,0 +1,91 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Task index
+{% endblock %}
+
+{% block stylesheets %}
+	<link rel="stylesheet" href='../../css/styles.css' type="text/css">
+{% endblock %}
+
+{% block body %}
+
+
+	<h1 class="text-center wbkg">Task In Progress</h1>
+	<div class="tabby" style="padding:10px;display:table;">
+		<table class="table">
+			<thead>
+				<tr>
+					<th>Task Of</th>
+					<th>Task ID</th>
+
+					<th>Type</th>
+					<th>State</th>
+					<th>Actions</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for task in tasks %}
+					<tr>
+						<td>{{ task.user.username }}</td>
+						<td>{{ task.taskId }}</td>
+						<td>{{ task.type }}</td>
+						<td>{{ task.state }}</td>
+
+						<td>
+							<a href="{{ path('task_show', {'id': task.id}) }}" class="btn btn-outline-dark">Show</a>
+							<a href="{{ path('task_edit', {'id': task.id}) }}" class="btn btn-outline-info">Edit</a>
+							{% if task.state != "Done" %}
+								<a href="{{ path('task_done', {'id': task.id}) }}" class="btn btn-outline-dark">Finish</a>
+							{% endif %}
+
+						</td>
+					</tr>
+				{% else %}
+					<tr>
+						<td colspan="8">No records found</td>
+					</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	</div>
+
+
+	<h1 class="text-center wbkg">Task Done</h1>
+	<div class="tabby" style="padding:10px;display:table;">
+		<table class="table">
+			<thead>
+				<tr>
+					<th>Task Of</th>
+					<th>Task ID</th>
+					<th>Type</th>
+					<th>State</th>
+					<th>Actions</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for task in tasks_done %}
+					<tr>
+						<td>{{ task.user.username }}</td>
+						<td>{{ task.taskId }}</td>
+						<td>{{ task.type }}</td>
+						<td>{{ task.state }}</td>
+
+						<td>
+							<a href="{{ path('task_show', {'id': task.id}) }}" class="btn btn-outline-dark">Show</a>
+							<a href="{{ path('task_edit', {'id': task.id}) }}" class="btn btn-outline-info">Edit</a>
+							{% if task.state != "Done" %}
+								<a href="{{ path('task_done', {'id': task.id}) }}" class="btn btn-outline-dark">Finish</a>
+							{% endif %}
+
+						</td>
+					</tr>
+				{% else %}
+					<tr>
+						<td colspan="8">No records found</td>
+					</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	</div>
+
+{% endblock %}

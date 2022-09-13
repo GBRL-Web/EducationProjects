@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Task
+{% endblock %}
+
+{% block stylesheets %}
+	<link rel="stylesheet" href='../../css/styles.css' type="text/css">
+{% endblock %}
+
+{% block body %}
+	<h1 class="wbkg text-center">Task</h1>
+	<div class="d-flex justify-content-center ">
+		<div class="container tabby">
+			<table class="table">
+				<tbody>
+					<tr>
+						<th>Task ID:</th>
+						<td>{{ task.taskId }}</td>
+					</tr>
+					<tr>
+						<th>First name :</th>
+						<td>{{ task.name }}</td>
+					</tr>
+					<tr>
+						<th>Last name:</th>
+						<td>{{ task.lastName }}</td>
+					</tr>
+					<tr>
+						<th>Address :</th>
+						<td>{{ task.address }}</td>
+					</tr>
+					<tr>
+						<th>Description :</th>
+						<td>{{ task.description }}</td>
+					</tr>
+					<tr>
+						<th>State :</th>
+						<td>{{ task.state }}</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<a href="/tasks/{{ app.user}}" class="btn btn-success">Back to list</a>
+
+			<a href="{{ path('task_edit', {'id': task.id}) }}" class="btn btn-outline-info">Edit</a>
+
+			{{ include('task/_delete_form.html.twig') }}
+		</div>
+	</div>
+{% endblock %}
