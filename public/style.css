@@ -1,0 +1,11 @@
+.room {
+    align-items: center;
+    text-align: center;
+    padding: 20px 20px 20px 20px;
+    margin-top: 4px;
+    width: 19%;
+    border: 1px solid black;
+    border-radius: 6px;
+    display: inline-block;
+}
+
