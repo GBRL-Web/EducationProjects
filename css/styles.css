@@ -1,0 +1,152 @@
+@keyframes slidein {
+  from {
+    transform: translateX(0%);
+  }
+
+  to {
+    transform: translateX(100%);
+  }
+}
+@keyframes slideinb {
+  from {
+    transform: translateX(-30%);
+  }
+
+  to {
+    transform: translateX(300%);
+  }
+}
+@keyframes slideinc {
+  from {
+    transform: translateX(-30%);
+  }
+
+  to {
+    transform: translateX(50%);
+  }
+}
+@keyframes rainbow {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 25%}
+    100%{background-position:0% 50%}
+}
+body {
+  font-family: "Comfortaa";
+  color: black;
+  text-align: center;
+  margin:0;
+}
+
+h1 {
+  font-family: "Henny Penny";
+  font-size: 500%;
+  color: #ba4a00;
+  height:120px;
+  margin-top: 50px;
+  margin-bottom: 0;
+}
+
+h2 {
+  margin: 0;
+  font-size: 2.5rem;
+  color: #1a237e;
+}
+
+h3 {
+  font-size: 30px;
+  color: #2e86c1;
+}
+
+p {
+ margin: 0;
+}
+hr {
+  border-style: none;
+  border-top-style: dotted;
+  border-width: 6px;
+  border-color: #626567;
+  width: 5%;
+  margin:100px auto 100px auto;
+}
+
+.topcould {
+  position: absolute;
+  right: 10%;
+  top: 10px;
+  animation: 14s linear 3s infinite alternate slidein;
+}
+
+.botcloud {
+  position: absolute;
+  left: 10%;
+  animation: 10s linear 1s infinite alternate slideinb;
+}
+.mountain {
+  position: relative;
+  bottom: -4px;
+}
+.top-container {
+  text-align: center;
+  padding-top: 60px;
+  background-color:  #26c6da;
+  width: 100%;
+  height: 100%;
+}
+
+.mid-container {
+  background-color: #ccd1d1;
+  padding-bottom: 10px;
+}
+
+.bot-container {
+  height: 50px;
+  padding: 10px;
+  background-color:  #1c2833;
+}
+.footer-link {
+  font-family: "Comfortaa";
+  color: #2e86c1;
+  margin-left: 30px;
+}
+.btn {
+  border-radius: 12px;
+  padding:10px 20px 10px 20px;
+  font-family: "Comfortaa";
+  background-color: #d4ac0d;
+  color:  #fdfefe;
+}
+.weightedf {
+  font-weight: normal;
+}
+.skill-row {
+  text-align: left;
+  line-height: 2;
+  width: 50%;
+  margin: 100px auto 100px auto;
+
+}
+.gabriel {
+  text-decoration:underline;
+  background-image: repeating-linear-gradient(45deg, violet, indigo, blue, green, yellow, orange, red, violet);
+  text-align: center;
+  background-size: 800% 800%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: rainbow 8s ease infinite;
+
+}
+.compu {
+  width: 25%;
+  float: left;
+  margin-right: 30px;
+}
+.compu2 {
+  width: 25%;
+  float: right;
+  margin-left: 30px;
+}
+.footsie {
+  margin: 10px 0 10px 0;
+  color:#aeb6bf;
+  font-size: 10px;
+}
