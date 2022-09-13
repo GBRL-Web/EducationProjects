@@ -1,0 +1,154 @@
+body {
+  font-family: "Gruppo", cursive;
+  font-size: x-large;
+  color: #fad7a0;
+  background-color: black;
+  text-align: center;
+  margin: 0;
+}
+label {
+  width: auto;
+  float: none;
+}
+
+input {
+  border: 2px solid currentcolor;
+}
+input:invalid {
+  border: 2px dashed red;
+}
+input:invalid:focus {
+  background-image: red;
+}
+
+input[type="text"] {
+  font-family: "Gruppo", cursive;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="number"],
+textarea {
+  text-align: center;
+  border-radius: 10px;
+  border: 3px solid #4caf50;
+  font-family: "Gruppo", cursive;
+  font-size: x-large;
+  height: 40px;
+  width: 320px;
+  color: rgba(0, 0, 0, 100);
+  background-color: rgba(255, 255, 255, 100);
+  transition-duration: 0.4s;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+input[type="number"]:focus,
+textarea:focus {
+  font-size: x-large;
+  font-weight: bold;
+  color: #4caf50;
+  background-color: rgba(255, 255, 255, 100);
+}
+canvas {
+  background-position: top;
+  position: fixed;
+  display: block;
+  opacity: 30%;
+  z-index: -2;
+}
+
+.entry {
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.button1 {
+  background-color: black;
+  font-family: "Gruppo", cursive;
+  color: black;
+  border: 2px solid #4caf50; /* Green */
+  width: 30px;
+  height: 30px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  text-size-adjust: 1px;
+  transition-duration: 0.4s;
+  border-radius: 5px;
+  margin: 10px 20px 10px 10px;
+}
+.button1::first-letter {
+  font-size: medium;
+  color: green;
+}
+.button1:hover {
+  background-color: #4caf50; /* Green */
+  color: white;
+  width: 200px;
+  height: 40px;
+}
+h1 {
+  width: auto;
+  height: auto;
+  font-family: "Gruppo", cursive;
+}
+.centerPage {
+  height: 20%;
+  text-align: center;
+  margin: 0 0 0 0;
+  padding-top: 200px;
+}
+
+h2 {
+  margin: 0 0 0 0;
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+.vert {
+  color: #4caf50;
+}
+.rouge {
+  color: red;
+}
+.deletediv {
+  padding-top: 100px;
+  padding-bottom: 30px;
+}
+
+th,
+td {
+  border: 1px solid green;
+  border-radius: 5px;
+  text-align: center;
+}
+table {
+  font-size: medium;
+  border: 1px solid green;
+  border-radius: 5px;
+  text-align: center;
+  padding: 10px 10px 10px 10px;
+  width: 500px;
+  background-color: black;
+  margin-top: 10px;
+}
+footer {
+position:fixed;
+bottom: 0px;
+left: 48%;
+font-size: small;
+opacity: 30%;
+z-index: -1;
+}
+
+.backto {
+  position: fixed;
+  bottom: 100px;
+  left : 200px;
+}
