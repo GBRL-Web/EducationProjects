@@ -1,0 +1,123 @@
+@keyframes example {
+  from {
+    color: #a2d9ce;
+  }
+
+  to {
+    color: red;
+  }
+}
+
+body {
+  background-color: #34495e;
+  font-family: "Indie Flower", cursive;
+  font-size: 20px;
+  color: white;
+}
+
+hr {
+  border-style: none;
+  border-top-style: dotted;
+  border-width: 6px;
+  border-color: #239b56;
+  width: 10%;
+}
+
+h1 {
+  padding: 2%;
+  margin: 0;
+  font-family: "Dancing Script", cursive;
+  font-size: 50px;
+  color: #a2d9ce;
+  text-align: center;
+}
+
+h2 {
+  margin: 0;
+  font-family: "Rowdies", cursive;
+  color: #e59866;
+}
+
+h3 {
+  font-family: "Rowdies", cursive;
+  color: #922b21;
+}
+
+.back {
+  color: red;
+}
+
+.image {
+  overflow: hidden;
+  transition-duration: 1.6s;
+  transition-property: transform;
+}
+
+.image:hover {
+  -webkit-transform: rotate(720deg);
+  -moz-transform: rotate(720deg);
+  -o-transform: rotate(720deg);
+  transform: rotate(720deg);
+}
+
+.image2 {
+  overflow: hidden;
+  transition-duration: 1.6s;
+  transition-property: transform;
+}
+
+.image2:hover {
+  -webkit-transform: rotate(-720deg);
+  -moz-transform: rotate(-720deg);
+  -o-transform: rotate(-720deg);
+  transform: rotate(-720deg);
+}
+
+.centertext {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%)
+}
+
+.intro {
+  color: #a2d9ce;
+  background-color: #a2d9ce;
+  border: solid 12px #5d6d7e;
+  text-align: center;
+  width: 500px;
+  height: 160px;
+  position: relative;
+}
+
+.intro:hover {
+  animation-name: example;
+  animation-duration: 2s;
+  color: red;
+}
+
+p {
+  margin: 3px;
+}
+
+.about {
+  padding-left: 10%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-left: 10%;
+  margin-right: 10%;
+  background-color: gray;
+  border: dashed 10px black;
+  border-radius: 20px;
+}
+
+a {
+  padding-left: 10px;
+}
+
+.stars {
+  color: yellow;
+  text-align: center;
+}
