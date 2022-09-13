@@ -1,0 +1,6 @@
+.title-add-article {
+    @apply text-white font-bold;
+    margin-left: 66px;
+    padding-top: 83.5px;
+    font-size: 64px;
+}

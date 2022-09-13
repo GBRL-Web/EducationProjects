@@ -1,0 +1,23 @@
+* {
+    max-width: 100%;
+}
+
+.title {
+    background-color: #00cbd3;
+    color: black;
+    padding: 1rem;
+    font-weight: bold;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.background-login {
+    background-image: url('../../images/background-login.jpg');
+    background-size: cover;
+}
+.bg-black {
+    background-color: black;
+    max-width: 50%;
+}

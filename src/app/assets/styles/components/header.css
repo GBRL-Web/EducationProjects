@@ -1,0 +1,36 @@
+
+.menuHeader{
+    @apply max-w-7xl mx-auto px-2 sm:px-6 lg:px-8;
+}
+
+.menuNav{
+    @apply relative flex items-center justify-between h-32;
+}
+
+.containerMenu{
+    @apply flex-1 flex items-center justify-center sm:items-stretch mt-4;
+}
+
+.menuSizeDisplay{
+    @apply sm:block sm:ml-6 md:w-full lg:w-full;
+}
+
+.menuFirstRow{
+    @apply flex md:justify-evenly place-content-around mb-4;
+}
+
+.menuLogo{
+    @apply sm:w-2/5 md:w-1/4 lg:w-1/4 px-10 lg:ml-8 h-12;
+}
+
+.menuSearch{
+    @apply px-10 relative text-base bg-transparent w-2/5 lg:ml-10;
+}
+
+.menuSearchSideBar{
+    @apply hidden sm:flex items-center border-b-2 py-2;
+}
+
+.menuIconeSearch{
+    @apply block h-6 w-full ;
+}

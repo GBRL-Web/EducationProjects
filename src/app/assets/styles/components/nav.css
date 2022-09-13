@@ -1,0 +1,60 @@
+.fs-menu-article {
+    font-size: 35px;
+}
+
+.height-menu-article {
+    height: 52px;
+}
+
+.ul-nav {
+    margin-top: 120px;
+    @apply flex;
+}
+
+.li-nav {
+    @apply w-full list-none text-white font-bold hover:scale-125;
+}
+
+.menu-Article {
+    @apply fs-menu-article height-menu-article;
+}
+
+.menu-Article-Two {
+    @apply fs-menu-article height-menu-article;
+}
+
+.menu-Article-Three {
+    @apply fs-menu-article height-menu-article;
+}
+
+.menu-Article-Four {
+    @apply fs-menu-article height-menu-article;
+}
+
+article {
+    display: inline-block;
+    color: white;
+}
+
+label {
+    @apply font-bold;
+}
+.position {
+    display: flex;
+    flex-direction: column;
+    margin-top: 70px;
+}
+
+.articleun {
+    @apply fs-menu-article height-menu-article;
+    width: 524.35px;
+    margin-right: 131.75px;
+    margin-top: 25px;
+}
+
+.articledeux {
+    margin-top: 200px;
+    @apply fs-menu-article height-menu-article;
+    width: 1189.46px;
+    height: 449px;
+}
