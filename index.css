@@ -1,0 +1,39 @@
+body {
+    font-family: "Monaco", "Helvetica Neue",monospace;
+}
+input {
+    border:none;
+    border-bottom: 3px solid #1890ff;
+    padding: 5px 10px;
+    outline: none;
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+input:focus {
+    border-color: green
+}
+
+.center {
+   text-align: center;
+}
+#response {
+    font-size: 7.5rem;
+}
+
+.numInput {
+    width: 10%;
+}
+.operators {
+    padding-top: 2rem;
+}
